@@ -1,6 +1,8 @@
 package module3.ex1_aboutfile;
 
-public class File {}
+abstract public class File {
+    public abstract void printFileDetails();
+}
 
 
 

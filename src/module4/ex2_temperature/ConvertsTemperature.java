@@ -5,19 +5,32 @@ package module4.ex2_temperature;
  * в значение по шкале Фаренгейта и в обратном направлении.
  */
 public class ConvertsTemperature {
-    public static void main(String[] args) {
-        int celsiusDegree = 21;
-        System.out.println(celsiusDegree + " градусов Цельсия по шкале Фаренгейта равняется " + celsiusToFahrenheit(celsiusDegree) + ";");
 
-        int fahrenheitDegree = 263;
-        System.out.println(fahrenheitDegree + " градусов Фаренгейтая по шкале Цельсия равняется " + Math.round(fahrenheitToCelsius(fahrenheitDegree)) + ";");
+    private int celsiusDegree;
+    private int fahrenheitDegree;
+
+    public int getCelsiusDegree() {
+        return celsiusDegree;
     }
-    public static double celsiusToFahrenheit(int celsiusDegree) {
+
+    public int getFahrenheitDegree() {
+        return fahrenheitDegree;
+    }
+
+    public void setCelsiusDegree(int celsiusDegree) {
+        this.celsiusDegree = celsiusDegree;
+    }
+
+    public void setFahrenheitDegree(int fahrenheitDegree) {
+        this.fahrenheitDegree = fahrenheitDegree;
+    }
+
+    public double celsiusToFahrenheit() {
         double convertCelsiusToFahrenheit = celsiusDegree * 33.8;
         return convertCelsiusToFahrenheit;
     }
 
-    public static double fahrenheitToCelsius(int celsiusDegree) {
+    public double fahrenheitToCelsius() {
         double convertFahrenheitToCelsius = celsiusDegree / 33.8;
         return convertFahrenheitToCelsius;
     }

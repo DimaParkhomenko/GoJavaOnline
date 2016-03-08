@@ -1,13 +1,13 @@
 package module3.ex2_aboutflowers;
 
-public class Astra extends Flower {
+public class Tulip extends Flower {
 
     String colour;
     String name;
 
-    Astra() {
-        this.name = "Astra";
-        this.colour = "Purple";
+    Tulip() {
+        this.colour = "Red";
+        this.name = "Tulip";
     }
 
     public String getClour() {
