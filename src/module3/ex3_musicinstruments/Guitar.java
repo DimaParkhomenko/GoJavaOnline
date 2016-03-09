@@ -13,6 +13,10 @@ public class Guitar extends MusicInstruments {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getVolumeOfGuitar() {
         return volumeOfGuitar;
     }

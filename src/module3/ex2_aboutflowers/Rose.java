@@ -1,6 +1,6 @@
 package module3.ex2_aboutflowers;
 
-public class Rose extends Flower implements RoseBush {
+public class Rose extends Flower {
 
     String colour;
     String name;
@@ -14,16 +14,20 @@ public class Rose extends Flower implements RoseBush {
         return colour;
     }
 
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String colourOfFlower() {
         return getColour();
     }
 
-    @Override
-    public int amountOfRoses() {
-        return 3;
-    }
 }

@@ -1,5 +1,14 @@
 package module3.ex2_aboutflowers;
 
-public interface RoseBush {
-    public abstract  int amountOfRoses();
+public class RoseBush {
+    private Rose rose;
+
+    RoseBush(){
+        this.rose = new Rose();
+        rose.setName("White roses");
+    }
+
+    public String getRose() {
+        return rose.getName();
+    }
 }

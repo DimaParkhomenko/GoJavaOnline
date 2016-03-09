@@ -1,30 +1,31 @@
 package module3.ex1_aboutfile;
 
-public class ImgFile extends File implements Directory {
+public class ImgFile extends File {
     String type;
     private String sizeOfKeeping;
 
-    ImgFile () {
+    ImgFile() {
         this.type = "ImgFile";
         this.sizeOfKeeping = "50 megabytes";
     }
 
     public void printFileDetails() {
-        System.out.print("Type: " + getType() + "; ");
-        System.out.println("max size of keeping is " + maxSizeOfKeeping() + ";");
+        System.out.println("Type: " + getType() + "; ");
     }
 
     public String getType() {
         return type;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setSizeOfKeeping(String sizeOfKeeping) {
+        this.sizeOfKeeping = sizeOfKeeping;
+    }
 
     public String getSizeOfKeeping() {
         return sizeOfKeeping;
-    }
-
-    @Override
-    public String maxSizeOfKeeping() {
-        return getSizeOfKeeping();
     }
 }

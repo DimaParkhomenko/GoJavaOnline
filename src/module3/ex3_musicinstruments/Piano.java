@@ -14,6 +14,10 @@ public class Piano extends MusicInstruments{
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getVolumeOfPiano() {
         return volumeOfPiano;
     }

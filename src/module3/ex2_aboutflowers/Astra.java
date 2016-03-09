@@ -10,15 +10,24 @@ public class Astra extends Flower {
         this.colour = "Purple";
     }
 
-    public String getClour() {
+    public String getColour() {
         return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public String getName() {
         return name;
     }
 
-    public String colourOfFlower() {
-        return getClour();
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String colourOfFlower() {
+        return getColour();
+    }
+
 }
