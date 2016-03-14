@@ -1,13 +1,17 @@
 package module6;
 
-public class WrongCharException extends Exception{
-    private String sizeOfKeeping;
+public class WrongCharException extends Exception {
+    private String type;
 
-    public WrongCharException(String sizeOfKeeping) {
-        this.sizeOfKeeping = sizeOfKeeping;
+    public WrongCharException(String type) {
+        this.type = type;
     }
 
-    public String getSizeOfKeeping() {
-        return sizeOfKeeping;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 }
