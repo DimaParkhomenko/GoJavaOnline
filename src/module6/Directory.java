@@ -1,29 +1,36 @@
 package module6;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Directory {
-    private TextFile textFile;
-    private ImgFile imgFile;
-    private AudioFile audioFile;
 
-    public Directory() {
-        this.textFile = new TextFile();
-        textFile.setSizeOfKeeping("99 megabytes");
-        this.imgFile = new ImgFile();
-        imgFile.setSizeOfKeeping("919 megabytes");
-        this.audioFile = new AudioFile();
-        audioFile.setSizeOfKeeping("929 megabytes");
-    }
+	// Usually directory contains just list of files
+	// you can deal with files (create, copy, delete), you can list directory to
+	// find out how many files it contains, or what files it contains.
+	// I removed methods like getSizeOfKeeping, because directory doesn't care
+	// what kinds of files it contains and how large they can be.
+	// Directory can be empty, so there can be no files inside.
+	private List<File> files;
 
-    public String getTextFile() {
-        return textFile.getSizeOfKeeping();
-    }
+	public Directory() {
+		files = new ArrayList<File>();
+	}
 
-    public String getImgFile() {
-        return imgFile.getSizeOfKeeping();
-    }
+	public void putFile(File file) {
+		files.add(file);
+	}
 
-    public String getAudioFile() {
-        return audioFile.getSizeOfKeeping();
-    }
+	public List<File> listFiles() {
+		return Collections.unmodifiableList(files);
+	}
+
+	public void printFilesDetails() {
+		System.out.println("There such types of files in Directory as:");
+		for (File file : files) {
+			file.printFileDetails();
+		}
+	}
+
 }

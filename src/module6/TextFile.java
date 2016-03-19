@@ -1,24 +1,16 @@
 package module6;
 
 public class TextFile extends File {
-    String type;
-    private String sizeOfKeeping;
 
-    TextFile() {
-        this.type = "TextFile";
+	private String sizeOfKeeping;
+
+    public TextFile() {
         this.sizeOfKeeping = "25 megabytes";
     }
 
+    @Override
     public void printFileDetails() {
-        System.out.println("Type: " + getType() + "; ");
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+        System.out.println("Type: " + getType() + "; sizeOfKeeping=" + sizeOfKeeping );
     }
 
     public void setSizeOfKeeping(String sizeOfKeeping) {
@@ -28,4 +20,5 @@ public class TextFile extends File {
     public String getSizeOfKeeping() {
         return sizeOfKeeping;
     }
+
 }

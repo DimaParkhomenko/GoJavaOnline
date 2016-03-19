@@ -1,31 +1,25 @@
 package module6;
 
 public class AudioFile extends File {
-    private String type;
-    private String sizeOfKeeping;
+	private String sizeOfKeeping;
 
-    AudioFile() {
-        this.type = "AudioFile";
-        this.sizeOfKeeping = "100 megabytes";
-    }
+	public AudioFile() {
+		this.sizeOfKeeping = "100 megabytes";
+	}
 
-    public void printFileDetails() {
-        System.out.println("Type: " + getType() + "; ");
-    }
+	// we put @Override annotation to confirm that we indeed implementing (overrding)
+	// parrent's method.
+	@Override
+	public void printFileDetails() {
+		System.out.println("Type: " + getType() + "; sizeOfKeeping="
+				+ sizeOfKeeping);
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setSizeOfKeeping(String sizeOfKeeping) {
+		this.sizeOfKeeping = sizeOfKeeping;
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setSizeOfKeeping(String sizeOfKeeping) {
-        this.sizeOfKeeping = sizeOfKeeping;
-    }
-
-    public String getSizeOfKeeping() {
-        return sizeOfKeeping;
-    }
+	public String getSizeOfKeeping() {
+		return sizeOfKeeping;
+	}
 }

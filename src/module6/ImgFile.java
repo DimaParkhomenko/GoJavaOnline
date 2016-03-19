@@ -1,31 +1,23 @@
 package module6;
 
 public class ImgFile extends File {
-    String type;
-    private String sizeOfKeeping;
 
-    ImgFile() {
-        this.type = "ImgFile";
-        this.sizeOfKeeping = "50 megabytes";
-    }
+	private String sizeOfKeeping;
 
-    public void printFileDetails() {
-        System.out.println("Type: " + getType() + "; ");
-    }
+	public ImgFile() {
+		this.sizeOfKeeping = "50 megabytes";
+	}
 
-    public String getType() {
-        return type;
-    }
+	@Override
+	public void printFileDetails() {
+		System.out.println("Type: " + getType() + "; sizeOfKeeping=" + sizeOfKeeping);
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public void setSizeOfKeeping(String sizeOfKeeping) {
+		this.sizeOfKeeping = sizeOfKeeping;
+	}
 
-    public void setSizeOfKeeping(String sizeOfKeeping) {
-        this.sizeOfKeeping = sizeOfKeeping;
-    }
-
-    public String getSizeOfKeeping() {
-        return sizeOfKeeping;
-    }
+	public String getSizeOfKeeping() {
+		return sizeOfKeeping;
+	}
 }
