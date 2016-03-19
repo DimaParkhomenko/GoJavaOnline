@@ -14,6 +14,11 @@ public class ArrMinMaxSortTestDrive {
         System.out.println("Max Array's value is " + getMaxValue(arr));
         System.out.println("Min Array's value is " + getMinValue(arr));
 
+
+        System.out.println("Sort arr using  'bubble sort':" + Arrays.toString(doBubbleSort(arr)));
+    }
+
+    public static int[] doBubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -21,12 +26,10 @@ public class ArrMinMaxSortTestDrive {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
                 }
-
             }
         }
-        System.out.println("Sort arr using  'bubble sort':" + Arrays.toString(arr));
+        return arr;
     }
-
 
     public static int getMaxValue(int[] arr) {
         int maxValue = arr[0];
