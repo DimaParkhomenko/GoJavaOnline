@@ -1,24 +1,15 @@
-package module6;
+package module6.ex1_aboutfile_Exception;
 
 public class ImgFile extends File {
-    String type;
     private String sizeOfKeeping;
 
-    ImgFile() {
-        this.type = "ImgFile";
+    public ImgFile() {
         this.sizeOfKeeping = "50 megabytes";
     }
 
+    @Override
     public void printFileDetails() {
-        System.out.println("Type: " + getType() + "; ");
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+        System.out.println("Type: " + getType() + "; sizeOfKeeping=" + sizeOfKeeping);
     }
 
     public void setSizeOfKeeping(String sizeOfKeeping) {
