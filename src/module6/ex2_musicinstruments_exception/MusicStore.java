@@ -1,39 +1,37 @@
 package module6.ex2_musicinstruments_exception;
 
-import java.util.List;
-
 public class MusicStore {
-    List<Piano> pianos;
-    List<Guitar> guitars;
-    List<Trumpet> trumpets;
+    int pianos;
+    int guitars;
+    int trumpets;
 
-    public List<Piano> getPianos() {
-        return pianos;
-    }
-
-    public void setPianos(List<Piano> pianos) {
+    public void setPianos(int pianos) {
         this.pianos = pianos;
     }
 
-    public List<Guitar> getGuitars() {
-        return guitars;
-    }
-
-    public void setGuitars(List<Guitar> guitars) {
+    public void setGuitars(int guitars) {
         this.guitars = guitars;
     }
 
-    public List<Trumpet> getTrumpets() {
-        return trumpets;
+    public void setTrumpets(int trumpets) {
+        this.trumpets = trumpets;
     }
 
-    protected void setTrumpets(List<Trumpet> trumpets) {
-        this.trumpets = trumpets;
+    public int getPianos() {
+        return pianos;
+    }
+
+    public int getGuitars() {
+        return guitars;
+    }
+
+    public int getTrumpets() {
+        return trumpets;
     }
 
     @Override
     public String toString() {
-        return "MusicStore {" + "guitars=" + guitars.size() + ", pianos=" + pianos.size() + ", trumpets=" + trumpets.size() + '}';
+        return "MusicStore contains " + "guitars=" + guitars + ", pianos=" + pianos + ", trumpets=" + trumpets;
 
     }
 }
