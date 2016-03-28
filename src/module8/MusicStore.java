@@ -1,33 +1,26 @@
 package module8;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MusicStore {
-    private List<Guitar> guitars;
-    private List<Piano> pianos;
-    private List<Trumpet> trumpets;
 
-    public List<Trumpet> getTrumpets() {
-        return trumpets;
+    private List<MusicInstruments> musicInstruments;
+
+    public MusicStore() {
+        musicInstruments = new ArrayList<MusicInstruments>();
     }
 
-    public void setTrumpets(List<Trumpet> trumpets) {
-        this.trumpets = trumpets;
+    public void putMusicInstrument(MusicInstruments musicInstrument) {
+        musicInstruments.add(musicInstrument);
     }
 
-    public List<Guitar> getGuitars() {
-        return guitars;
+    public List<MusicInstruments> listMusicInstruments() {
+        return Collections.unmodifiableList(musicInstruments);
     }
 
-    public void setGuitars(List<Guitar> guitars) {
-        this.guitars = guitars;
-    }
-
-    public List<Piano> getPianos() {
-        return pianos;
-    }
-
-    public void setPianos(List<Piano> pianos) {
-        this.pianos = pianos;
+    public void printMusicInstrumentDetails() {
+        for (MusicInstruments musicInstrument : musicInstruments) System.out.println(musicInstrument);
     }
 }
