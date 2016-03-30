@@ -20,11 +20,13 @@ public class MusicInstrumentTestDrive {
         order.put("trumpet", 1);
 
         List<MusicInstruments> guitarsToRemove = prepareOrder(musicStore, order);
-        System.out.println("removed guitars" + guitarsToRemove.size()); //выводит общее кол-во инструментов, всеравно что написать "removed pianos" + pianosToRemove.size()
+        System.out.println("removed guitars " + guitarsToRemove.size());
         List<MusicInstruments> pianosToRemove = prepareOrder(musicStore, order);
+        System.out.println("removed pianos " + pianosToRemove.size());
         List<MusicInstruments> trumpetsToRemove = prepareOrder(musicStore, order);
+        System.out.println("removed trumpets " + trumpetsToRemove.size());
 
-        System.out.println(musicStore + " after removed.");//здесь выводит кол-во позиции, которые нужно удалить, умноженные на три
+        System.out.println(musicStore + " after removed.");
     }
 
     private static List<MusicInstruments> prepareOrder(MusicStore musicStore, Map<String, Integer> order) {
