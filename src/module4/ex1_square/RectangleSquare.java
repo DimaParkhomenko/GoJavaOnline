@@ -4,24 +4,12 @@ public class RectangleSquare {
     private int heightOfRectangle;
     private int widthOfRectangle;
 
-    public int getHeightOfRectangle() {
-        return heightOfRectangle;
-    }
-
-    public void setHeightOfRectangle(int heightOfRectangle) {
+    public RectangleSquare(int heightOfRectangle, int widthOfRectangle) {
         this.heightOfRectangle = heightOfRectangle;
-    }
-
-    public int getWidthOfRectangle() {
-        return widthOfRectangle;
-    }
-
-    public void setWidthOfRectangle(int widthOfRectangle) {
         this.widthOfRectangle = widthOfRectangle;
     }
 
     public int countRectangleSquare() {
-        int rectangleSqure = heightOfRectangle * widthOfRectangle;
-        return rectangleSqure;
+        return heightOfRectangle * widthOfRectangle;
     }
 }
