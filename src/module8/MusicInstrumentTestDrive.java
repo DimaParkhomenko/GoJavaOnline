@@ -9,10 +9,7 @@ package module8;
 Создать упорядоченный список объектов из ДЗ по теме OOP in Java не прибегая к  использованию Collections.sort().
 */
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.TreeSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class MusicInstrumentTestDrive {
     public static void main(String[] args) {
@@ -21,10 +18,10 @@ public class MusicInstrumentTestDrive {
         ArrayList<Trumpet> trumpetList = new ArrayList<>();
         MusicStore musicStore = new MusicStore();
 
-        System.out.println("Sort piano's list:");
+        System.out.println("Sort Music Instruments list:");
         makeSort();
-        System.out.println();
 
+        System.out.println();
         musicStore.putMusicInstrument(new Guitar("Best guitar", 656));
         musicStore.putMusicInstrument(new Piano("Best piano", 56));
         musicStore.putMusicInstrument(new Trumpet("Best trumpet", 56));
@@ -48,16 +45,16 @@ public class MusicInstrumentTestDrive {
         pianoList.stream().forEach(instrument -> System.out.println(instrument + " "));
         trumpetList.stream().forEach(instrument -> System.out.println(instrument + " "));
         musicStore.printMusicInstrumentDetails();
-
     }
 
     public static void makeSort() {
-        TreeSet<Piano> piano = new TreeSet<Piano>();
-        piano.add(new Piano("Jack's piano", 56));
-        piano.add(new Piano("Nick's piano", 856));
-        piano.add(new Piano("Alice's piano", 526));
-        piano.add(new Piano("Bill's piano", 456));
-        for (Piano pianos : piano) System.out.println(pianos.getTypeOfInstruments());
+        Comparator<MusicInstruments> musicInstrumentsComparator = new MusicInstrumentByPriceComparator().thenComparing(new MusicInstrumentByPriceComparator());
+
+        TreeSet<MusicInstruments> musicInstrumentses = new TreeSet(musicInstrumentsComparator);
+        musicInstrumentses.add(new Piano("Jack's piano ", 56));
+        musicInstrumentses.add(new Guitar("Nick's guitar ", 22));
+        musicInstrumentses.add(new Trumpet("Alice's trumpet", 23));
+
+        musicInstrumentses.stream().forEach(instrument -> System.out.println(instrument + " "));
     }
 }
-

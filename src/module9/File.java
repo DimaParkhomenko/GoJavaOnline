@@ -1,8 +1,17 @@
 package module9;
 
 abstract public class File {
-protected String type;
+    protected String typeOfFile;
+
+    public File() {
+        this.typeOfFile = this.getClass().getSimpleName();
+    }
+
+    public String getTypeOfFile() {
+        return typeOfFile;
+    }
 }
+
 
 
 
