@@ -14,9 +14,7 @@ public class TextFile extends File {
 
     @Override
     public String toString() {
-        return "TextFile{" +
-                "typeOfFile='" + typeOfFile + '\'' +
-                '}';
+        return  typeOfFile;
     }
 
 }

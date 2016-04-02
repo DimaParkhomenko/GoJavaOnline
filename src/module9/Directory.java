@@ -23,6 +23,7 @@ public class Directory {
     public List<File> getFiles() {
         return files;
     }
+
     @Override
     public String toString() {
         return "Directory{" +

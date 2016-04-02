@@ -14,9 +14,7 @@ public class AudioFile extends File {
 
     @Override
     public String toString() {
-        return "AudioFile{" +
-                "typeOfFile='" + typeOfFile + '\'' +
-                '}';
+        return typeOfFile;
     }
 
 }
