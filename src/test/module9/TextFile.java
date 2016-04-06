@@ -1,10 +1,10 @@
-package test;
+package test.module9;
 
-public class AudioFile extends File {
+public class TextFile extends File {
 
     private String typeOfFile;
 
-    public AudioFile(String typeOfFile) {
+    public TextFile(String typeOfFile) {
         this.typeOfFile = typeOfFile;
     }
 
