@@ -1,15 +1,18 @@
 package module4.ex1_square;
 
-public class RectangleSquare {
-    private int heightOfRectangle;
-    private int widthOfRectangle;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
-    public RectangleSquare(int heightOfRectangle, int widthOfRectangle) {
+public class RectangleSquare {
+    private double heightOfRectangle;
+    private double widthOfRectangle;
+
+    public RectangleSquare(double heightOfRectangle, double widthOfRectangle) {
         this.heightOfRectangle = heightOfRectangle;
         this.widthOfRectangle = widthOfRectangle;
     }
 
-    public int countRectangleSquare() {
-        return heightOfRectangle * widthOfRectangle;
+    public double countRectangleSquare() {
+        return new BigDecimal((heightOfRectangle * widthOfRectangle) / 2).setScale(3, RoundingMode.UP).doubleValue();
     }
 }

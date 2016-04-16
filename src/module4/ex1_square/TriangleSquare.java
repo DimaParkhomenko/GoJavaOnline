@@ -1,16 +1,19 @@
 package module4.ex1_square;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class TriangleSquare {
 
-    private int sideOfTriangle;
-    private int heightOfTriangle; //the height of a triangle lowered on the side "sideOfTriangle"
+    private double sideOfTriangle;
+    private double heightOfTriangle; //the height of a triangle lowered on the side "sideOfTriangle"
 
-    public TriangleSquare(int sideOfTriangle, int heightOfTriangle) {
+    public TriangleSquare(double sideOfTriangle, double heightOfTriangle) {
         this.sideOfTriangle = sideOfTriangle;
         this.heightOfTriangle = heightOfTriangle;
     }
 
-    public int countTriangleSquare() {
-        return (sideOfTriangle * heightOfTriangle) / 2;
+    public double countTriangleSquare() {
+        return  new BigDecimal((sideOfTriangle * heightOfTriangle) / 2).setScale(3, RoundingMode.UP).doubleValue();
     }
 }
