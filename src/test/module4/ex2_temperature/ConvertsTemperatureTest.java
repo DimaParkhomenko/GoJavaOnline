@@ -1,5 +1,5 @@
 package test.module4.ex2_temperature;
-
+import module4.ex2_temperature.*;
 
 import org.junit.Assert;
 import org.junit.Test;

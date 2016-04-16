@@ -1,5 +1,5 @@
 package test.module4.ex3_distance;
-
+import module4.ex3_distance.*;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,5 +1,5 @@
 package test.module5;
-
+import module5.*;
 
 import org.junit.Assert;
 import org.junit.Test;

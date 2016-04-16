@@ -1,7 +1,10 @@
 package test.module10;
 
+import com.sun.prism.shader.Texture_Color_AlphaTest_Loader;
+import module10.*;
 import org.junit.Assert;
 import org.junit.Test;
+
 
 public class CeaserCipherTest {
 
@@ -29,5 +32,20 @@ public class CeaserCipherTest {
         Assert.assertEquals("Hello Java!!!", decryptString);
     }
 
+    @Test(timeout = 3000)
+    public void testFileUtil() throws Exception {
 
+        FileUtil fileUtil = new FileUtil();
+        try {
+            fileUtil.write("TextTest.txt", "Hello Sidney.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            fileUtil.read("TextTest.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

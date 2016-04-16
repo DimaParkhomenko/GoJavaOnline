@@ -1,5 +1,6 @@
 package test.module4.ex1_square;
 
+import module4.ex1_square.*;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,33 +9,33 @@ public class CalculateSquareTest {
 
     @Test(timeout = 3000)
     public void testCountCircleSquare() throws Exception {
-        final int radius = 5;
+        final double radius = 5;
 
         CircleSquare circleSquare = new CircleSquare(radius);
-        final int resultCircleSquare = circleSquare.countCircleSquare();
+        final double resultCircleSquare = circleSquare.countCircleSquare();
 
-        Assert.assertEquals(15, resultCircleSquare);
+        Assert.assertEquals(78.54, resultCircleSquare, 0.01);
     }
 
     @Test(timeout = 3000)
     public void testCountRectangleSquare() throws Exception {
-        final int heightOfRectangle = 9;
-        final int widthOfRectangle = 8;
+        final double heightOfRectangle = 9;
+        final double widthOfRectangle = 8;
 
         RectangleSquare rectangleSquare = new RectangleSquare(heightOfRectangle, widthOfRectangle);
-        final int resultRectangleSquare = rectangleSquare.countRectangleSquare();
+        final double resultRectangleSquare = rectangleSquare.countRectangleSquare();
 
-        Assert.assertEquals(72, resultRectangleSquare);
+        Assert.assertEquals(36, resultRectangleSquare, 0.01);
     }
 
     @Test(timeout = 3000)
     public void testCountTriangleSquare() throws Exception {
-        final int sideOfTriangle = 5;
-        final int heightOfTriangle = 5;
+        final double sideOfTriangle = 5;
+        final double heightOfTriangle = 5;
 
         TriangleSquare triangleSquare = new TriangleSquare(sideOfTriangle, heightOfTriangle);
-        final int resultTriangleSquare = triangleSquare.countTriangleSquare();
+        final double resultTriangleSquare = triangleSquare.countTriangleSquare();
 
-        Assert.assertEquals(12, resultTriangleSquare);
+        Assert.assertEquals(12.5, resultTriangleSquare, 0.01);
     }
 }
