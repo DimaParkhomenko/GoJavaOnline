@@ -13,8 +13,8 @@ public class CalculateSquareTestDrive {
         rectangleSquare.setWidthOfRectangle(8);
        */
 
-        System.out.println("Площадь треугольника = " + circleSquare.countCircleSquare() + ";"); //Triangle Square
-        System.out.println("Площадь прямоугольника = " + triangleSquare.countTriangleSquare() + ";"); //Rectangle Square
-        System.out.println("Площадь круга = " + rectangleSquare.countRectangleSquare() + ";"); //Circle Square
+        System.out.println("Площадь треугольника = " + triangleSquare.countTriangleSquare() + ";"); //Triangle Square
+        System.out.println("Площадь прямоугольника = " + rectangleSquare.countRectangleSquare() + ";"); //Rectangle Square
+        System.out.println("Площадь круга = " + circleSquare.countCircleSquare() + ";"); //Circle Square
     }
 }
