@@ -22,6 +22,5 @@ public class MergeSortTest {
         MergeSort mergeSort = new MergeSort();
         System.out.println(Arrays.toString(mergeSort.merge(arrFirst, arrSecond)));
     }
-
 }
 

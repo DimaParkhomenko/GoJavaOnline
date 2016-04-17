@@ -3,7 +3,7 @@ package mergeSort;
 
 import java.util.Scanner;
 
-public class ConsoleArrayReader implements ArrayReader, ArrayWriter {
+public class ConsoleInOut implements ArrayReader, ArrayWriter {
 
     private int size;
     private int array[];
@@ -25,7 +25,9 @@ public class ConsoleArrayReader implements ArrayReader, ArrayWriter {
     }
 
     @Override
+
     public void write() {
+
         Scanner input = new Scanner(System.in);
         System.out.println("Ведите длину массива: ");
         setSize(input.nextInt());

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class FileArrayReader implements ArrayWriter, ArrayReader {
+public class FileInOut implements ArrayWriter, ArrayReader {
     private int size;
     private int array[];
     String fileName = "ArrayForMargeSort.txt";
