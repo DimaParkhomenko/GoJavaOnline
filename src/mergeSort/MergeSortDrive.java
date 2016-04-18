@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class MergeSortDrive {
     public static void main(String[] args) {
 
-        MergeSort mergeSort = new MergeSort();
         try {
+            MergeSort mergeSort = new MergeSort();
             System.out.println("Первый вариант - считывание данных для сортировки с консоли.");
             ConsoleInOut consoleArrayReader = new ConsoleInOut();
             consoleArrayReader.write();
@@ -25,7 +25,7 @@ public class MergeSortDrive {
         } catch (Exception e) {
             System.out.println("Вы ввели недопустимый символ." + '\n' +
                     "Длина массива должна иметь цыфровое значение и быть больше ноля." + '\n' +
-                    "Заполнять массив можно только цыфрами, значения меньше ноля допускаются." + '\n' +
+                    "Заполнять массив можно только цыфрами значения меньше ноля допускаются." + '\n' +
                     "Перезагрузите пожалуйста приложение и введите данные заново.");
         }
     }
