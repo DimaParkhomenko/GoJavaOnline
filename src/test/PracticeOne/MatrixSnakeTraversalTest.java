@@ -4,23 +4,25 @@ import practiceOne.MatrixSnakeTraversal;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 
 public class MatrixSnakeTraversalTest {
 
+    MatrixSnakeTraversal matrixSnakeTraversal = new MatrixSnakeTraversal();
+
+
     @Test
-    public void testPrint() throws Exception {
-        int[][] input = {{1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9} };
-        int [] expected = {1, 4, 7, 8, 5, 2, 3, 6, 9};
-        MatrixSnakeTraversal matrixSnakeTraversal = new MatrixSnakeTraversal();
+    public void testPrintForSquareMatrix() throws Exception {
+        int[][] input = {{1, 2, 3},
+                         {4, 5, 6},
+                         {7, 8, 9}};
+
+        int[] expected = {1, 4, 7, 8, 5, 2, 3, 6, 9};
         int[] extualResult = matrixSnakeTraversal.print(input);
-        Assert.assertEquals(expected, extualResult);
+        Assert.assertArrayEquals(expected, extualResult);
 
     }
+
+
 }
-/*
-[[ 1, 2, 3 ],
-        [ 4, 5, 6 ],
-        [ 7, 8, 9 ]]
-        повернути
-        [1, 4, 7, 8, 5, 2, 3, 6, 9]
-        */
