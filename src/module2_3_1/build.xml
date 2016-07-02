@@ -1,0 +1,31 @@
+<project name="module2_3_1" basedir=".">
+
+    <property name="src" location="."/>
+    <property name="build" location="build"/>
+    <property name="dist" location="dist"/>
+
+
+    <target name="init">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${dist}"/>
+    </target>
+
+
+    <target name="clean">
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${build}" source="1.7" target="1.7"/>
+    </target>
+
+    <target name="dist" depends="compile">
+        <jar destfile="${dist}/antModule2_3_1.jar" basedir="${build}">
+           <fileset dir="${build}"/>
+            <manifest>
+                <attribute name="Main-class" value="SemaphoreTestDrive"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

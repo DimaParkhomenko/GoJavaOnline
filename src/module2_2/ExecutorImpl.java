@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExecutorImpl<T> implements Executor<T> {
-    private List<Task<? extends T>> tasks;
+    private List<Task<? extends T>> tasks = new ArrayList<>();
 
-    private ArrayList<T> validResults;
-    private ArrayList<T> invalidResults;
+    private ArrayList<T> validResults = new ArrayList<>();
+    private ArrayList<T> invalidResults = new ArrayList<>();
 
     boolean isExecuteActivate;
 

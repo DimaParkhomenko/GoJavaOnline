@@ -1,6 +1,6 @@
 package module2_2;
 
-public class GenericsTestDrive {
+public class Run {
     public static void main(String[] args) {
         Task<Integer>[] intTasks = new IntegerTask[5];
         intTasks[0] = new IntegerTask(25);
